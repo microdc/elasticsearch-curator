@@ -33,6 +33,6 @@ spec:
         spec:
           containers:
           - name: curator
-            image: microdc/elasticsearch-curator:0.0.6
+            image: microdc/elasticsearch-curator:0.0.8
           restartPolicy: OnFailure
 ```
