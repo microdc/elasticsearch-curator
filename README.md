@@ -7,13 +7,14 @@ It is autobuilt by https://hub.docker.com/r/microdc/elasticsearch-curator on eac
 push to master branch.
 
 It is intended for use in a k8s cronjob. Its default config is to delete indices > 7 days. This
-can be overridden with a config map.
+can be overridden with a config map which mounts onto the /etc/elasticsearch-curator/ directory,
+and replaces files curator.yaml and actions.yaml .
 
 # Examples
 
 ## One-off run:
 ```bash
-kubectl run --namespace instrumentation --image=microdc/elasticsearch-curator:0.0.6 -i --rm --restart=Never elasticsearch-curator
+kubectl run --namespace instrumentation --image=microdc/elasticsearch-curator:0.0.8 -i --rm --restart=Never elasticsearch-curator
 ```
 
 ## k8s cron-job:
@@ -34,5 +35,4 @@ spec:
           - name: curator
             image: microdc/elasticsearch-curator:0.0.6
           restartPolicy: OnFailure
-
 ```
