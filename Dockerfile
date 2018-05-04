@@ -8,8 +8,8 @@ RUN pip install elasticsearch-curator==5.5
 RUN mkdir -p /etc/elasticsearch-curator
 
 USER curator
-COPY curator.yml /etc/elasticsearch-curator
-COPY actions.yml /etc/elasticsearch-curator
+COPY curator.yaml /etc/elasticsearch-curator
+COPY actions.yaml /etc/elasticsearch-curator
 
 ENTRYPOINT [ "/usr/local/bin/curator" ]
 CMD ["--config", "/etc/elasticsearch-curator/curator.yaml", "/etc/elasticsearch-curator/actions.yaml"]
