@@ -12,4 +12,4 @@ COPY curator.yml /etc/elasticsearch-curator
 COPY actions.yml /etc/elasticsearch-curator
 
 ENTRYPOINT [ "/usr/local/bin/curator" ]
-CMD ["--config", "/etc/elasticsearch-curator/curator.yml", "/etc/elasticsearch-curator/actions.yml", "--dry-run"]
+CMD ["--config", "/etc/elasticsearch-curator/curator.yml", "/etc/elasticsearch-curator/actions.yml"]
