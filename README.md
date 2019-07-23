@@ -1,3 +1,6 @@
+This REPO has now been archived. Please try : https://github.com/elastic/curator 
+
+
 # Introduction
 A simple elasticsearch-curator docker image to use to clear down ES in microdc.
 
